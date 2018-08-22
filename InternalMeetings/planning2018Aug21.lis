@@ -1,0 +1,36 @@
+IoT Meetup brainstorming session 21Aug2018
+------------------------------------------
+
+ I. Discussions
+   1. Meetup should have some structure, as oppose to an amorphous hangout session
+
+   2. First consideration is topic based meetup, where the first section is
+      one or more speakers addressing the topic, followed up by Q&A
+      and small breakout discussions.
+
+   3. Another possible structure is: main speaker(s) => show & tell => breakout discussions.
+
+   4. Initial target is once per month, with planning done 1 month ahead of the meetup.
+  
+   5. Proposal to have sessions on IoT fundamentals was shot down, for now. Main reason
+      was the low value of such a session, and the potential lack of interest from
+      more skilled attendees.
+
+   6. Basic skill level for attendees should be working familiarity with HW/SW. Preferred
+      skills are at industry level software and hardware engineers.
+
+   7. There is some contention as to how much company marketing is allowed -- opinions
+      range from none to some to any. Minimum is to be topic and project based, preferrably
+      personal projects based on their company's products.
+
+
+II. Action Items
+
+   1. Done. Create slack channel for internal discussions.
+      larry - created channel iotmeetup.
+
+   2. Done. Create repo for meetup artifacts accessible to public.
+      gil - created repo at https://github.com/fatcatfablab/IoTmeetup
+
+   3. Open. Break up effort into smaller tasks and distribute among coordinators.
+
