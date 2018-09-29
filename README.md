@@ -1,4 +1,5 @@
-# IoTmeetup
+# IoT4Makers
+
 
 This will hold artifacts from the IoT meetups for longer term storage and public access.
 Unless otherwise posted in subdirectories, the license terms are of the open-source variety.
