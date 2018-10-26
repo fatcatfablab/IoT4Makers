@@ -1,3 +1,3 @@
-# BLINK Meetup
+# BLYNK Meetup
 
 Meetup Content
