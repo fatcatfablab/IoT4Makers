@@ -5,3 +5,5 @@
 
 [Getting Started](https://www.blynk.cc/getting-started/ "Getting Started")
 
+![IoT4Makers](images/MeetupPart2.PNG?raw=true "Meetup")
+
