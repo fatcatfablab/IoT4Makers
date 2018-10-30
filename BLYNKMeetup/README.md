@@ -7,6 +7,7 @@
 
 [Code Builder](http://examples.blynk.cc/ "Code Builder")
 
+```
 // Iot Hello World
 // On ESP8266 Dev board
 
@@ -40,7 +41,6 @@ void upTimeV2()
 }
 
 // SETUP
-
 void setup()
 {
   Serial.begin(9600);
@@ -51,10 +51,9 @@ void setup()
 }
 
 // LOOP
-
 void loop()
 {
   Blynk.run();
   timer.run(); 
 }
-
+```
