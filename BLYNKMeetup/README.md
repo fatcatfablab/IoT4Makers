@@ -9,7 +9,7 @@
 
 ## IoT Hello World
 ```
-// On ESP8266 Dev board
+// On ESP8266 Dev board=(Device) Phone=(Interface) 
 // Device --> Server --> Interface  | = Arduino uptime on Interface
 // Device <-- Server <-- Interface  | = LED control on Device
 
@@ -25,7 +25,7 @@ BlynkTimer timer;
 // FUNCTIONS
 BLYNK_WRITE(V1) // Virtual Pin V1
 {
-  int pinValue = param.asInt(); // assigning incoming value from pin V1 to a variable
+  int pinValue = param.asInt(); // assigning incoming value from Interface pin V1 to a variable
   if(pinValue == 1){
     digitalWrite(LED_BUILTIN, HIGH);
   }
