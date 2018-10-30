@@ -57,4 +57,15 @@ void loop()
 ```
 ![Part 2](images/MeetupPart2.PNG?raw=true "Part 2")
 
+Add another LED - but to the interface
+
+```
+WidgetLED led1(V1);
+bool ledStatus = false;
+```
+
+
+
+
+
 ![IoT4Makers](images/BlynkMeetup2.png?raw=true "Meetup")
