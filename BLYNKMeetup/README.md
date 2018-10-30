@@ -1,5 +1,4 @@
 # BLYNK Meetup
-![IoT4Makers](images/BlynkMeetup2.png?raw=true "Meetup")
 
 [Supported Hardware](https://github.com/blynkkk/blynkkk.github.io/blob/master/SupportedHardware.md "Supported Hardware")
 
@@ -10,12 +9,10 @@
 **IoT Hello World**
 ```
 // On ESP8266 Dev board
-
 #include <ESP8266WiFi.h>
 #include <BlynkSimpleEsp8266.h>
 
 char auth[] = "your auth code"; // BLYNK App Project MeetupPart1
-
 char ssid[] = "SSID"; 
 char pass[] = "PASS";
 
@@ -54,3 +51,6 @@ void loop()
   timer.run(); 
 }
 ```
+
+
+![IoT4Makers](images/BlynkMeetup2.png?raw=true "Meetup")
