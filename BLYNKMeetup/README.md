@@ -21,6 +21,7 @@ char pass[] = "PASS";
 BlynkTimer timer;
 
 // FUNCTIONS
+
 BLYNK_WRITE(V1)
 {
   int pinValue = param.asInt(); // assigning incoming value from pin V1 to a variable
@@ -40,6 +41,7 @@ void upTimeV2()
 }
 
 // SETUP
+
 void setup()
 {
   Serial.begin(9600);
@@ -50,6 +52,7 @@ void setup()
 }
 
 // LOOP
+
 void loop()
 {
   Blynk.run();
