@@ -25,12 +25,10 @@ BlynkTimer timer;
 BLYNK_WRITE(V1)
 {
   int pinValue = param.asInt(); // assigning incoming value from pin V1 to a variable
-  Serial.print("V1 Button value is: ");
-  Serial.println(pinValue);
   if(pinValue == 1){
-    Serial.print("ledPin HIGH");
     digitalWrite(LED_BUILTIN, HIGH);
   }
+   else{
     digitalWrite(LED_BUILTIN, LOW);
   }
 }
@@ -43,10 +41,9 @@ void upTimeV2()
 // SETUP
 void setup()
 {
-  Serial.begin(9600);
   Blynk.begin(auth, ssid, pass);
   pinMode(LED_BUILTIN, OUTPUT); 
-                 // milis,function  
+                 // milis, function on timer  
   timer.setInterval(1000L, upTimeV2); 
 }
 
