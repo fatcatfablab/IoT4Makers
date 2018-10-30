@@ -55,6 +55,8 @@ void loop()
   timer.run(); 
 }
 ```
+## Temperature Probe
+
 ![Part 2](images/MeetupPart2.PNG?raw=true "Part 2")
 
 Add another LED - but to the interface
