@@ -1,4 +1,5 @@
 # BLYNK Meetup
+## Prerequisites
 
 [Supported Hardware](https://github.com/blynkkk/blynkkk.github.io/blob/master/SupportedHardware.md "Supported Hardware")
 
@@ -6,9 +7,12 @@
 
 [Code Builder](http://examples.blynk.cc/ "Code Builder")
 
-**IoT Hello World**
+## IoT Hello World
 ```
 // On ESP8266 Dev board
+// Device --> Server --> Interface  | = Arduino uptime on Interface
+// Device <-- Server <-- Interface  | = LED control on Device
+
 #include <ESP8266WiFi.h>
 #include <BlynkSimpleEsp8266.h>
 
