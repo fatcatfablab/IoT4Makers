@@ -34,9 +34,15 @@ BLYNK_WRITE(V1) // Virtual Pin V1
   }
 }
  
-void upTimeV2() 
+void uptime()
 {
-   Blynk.virtualWrite(V2, millis() / 1000);
+  Blynk.virtualWrite(V2, millis() / 1000);
+}
+
+// Timings
+void everySecond() 
+{
+  uptime();   
 }
 
 // SETUP
@@ -45,7 +51,7 @@ void setup()
   Blynk.begin(auth, ssid, pass);
   pinMode(LED_BUILTIN, OUTPUT); 
                  // milis, function on timer  
-  timer.setInterval(1000L, upTimeV2); 
+  timer.setInterval(1000L, everySecond); 
 }
 
 // LOOP
@@ -59,7 +65,7 @@ void loop()
 
 ![Part 2](images/MeetupPart2.PNG?raw=true "Part 2")
 
-Add another LED - but to the interface
+Add another LED - but at the interface
 
 ```
 WidgetLED led1(V1);
