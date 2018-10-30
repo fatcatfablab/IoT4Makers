@@ -13,6 +13,7 @@
 // Device --> Server --> Interface  | = Arduino uptime on Interface
 // Device <-- Server <-- Interface  | = LED control on Device
 
+// GLOBALS
 #include <ESP8266WiFi.h>
 #include <BlynkSimpleEsp8266.h>
 
@@ -61,15 +62,27 @@ void loop()
   timer.run(); 
 }
 ```
-## Temperature Probe
-
 ![Part 2](images/MeetupPart2.PNG?raw=true "Part 2")
 
-Add another LED - but at the interface
+## Add LED
+- but at the interface
 
 ```
+// Add to GLOBALS
 WidgetLED led1(V1);
 bool ledStatus = false;
+
+// Add to FUNCTIONS
+void blinkLedWidget()
+{
+  if (ledStatus) {
+    led1.setColor("#D3435C"); //Red
+    ledStatus = false;
+  } else {
+    led1.setColor("#23C48E"); //Green
+    ledStatus = true;
+  }
+}
 ```
 
 
