@@ -7,8 +7,8 @@
 
 [Code Builder](http://examples.blynk.cc/ "Code Builder")
 
+**IoT Hello World**
 ```
-// Iot Hello World
 // On ESP8266 Dev board
 
 #include <ESP8266WiFi.h>
