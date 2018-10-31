@@ -1,4 +1,5 @@
 # BLYNK Meetup
+IoT your project in 15 minutes for less that $15
 ## Prerequisites
 
 [Supported Hardware](https://github.com/blynkkk/blynkkk.github.io/blob/master/SupportedHardware.md "Supported Hardware")
