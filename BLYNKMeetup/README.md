@@ -123,6 +123,13 @@ Add to Timing function everySecond
 ```
 getTemp();
 ```
+Add Labled Value Display to BLYNK App on V3 - PUSH
+
+## Setup Temperature Alert
+Add to GLOBALS
+```
+int tempTrigger = 50;
+```
 
 
 
