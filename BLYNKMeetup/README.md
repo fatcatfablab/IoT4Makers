@@ -41,7 +41,7 @@ void uptime()
   Blynk.virtualWrite(V2, millis() / 1000);
 }
 
-// Timings
+// TIMING functions
 void everySecond() 
 {
   uptime();   
@@ -63,17 +63,19 @@ void loop()
   timer.run(); 
 }
 ```
+## Temperature Probe Circuit
 ![Part 2](images/MeetupPart2.PNG?raw=true "Part 2")
 
 ## Add LED
-- but at the interface
+ but on the BLYNK Interface - App
 
+Add to GLOBALS
 ```
-// Add to GLOBALS
 WidgetLED led1(V1);
 bool ledStatus = false;
-
-// Add to FUNCTIONS
+```
+Add to FUNCTIONS
+```
 void blinkLedWidget()
 {
   if (ledStatus) {
@@ -85,7 +87,42 @@ void blinkLedWidget()
   }
 }
 ```
+Add to Timing function everySecond
+```
+blinkLedWidget();
+```
+Add LED widget to BLYNK app on V1
 
+## Add Temperature Probe
+Add to GLOBALS
+```
+#include <OneWire.h>
+#include <DallasTemperature.h>
+
+#define ONE_WIRE_BUS 14
+OneWire oneWire(ONE_WIRE_BUS);
+DallasTemperature sensors(&oneWire);
+ float Fahrenheit=0;
+```
+Add to SETUP
+```
+sensors.begin(); // Temperature probe lib initialize
+```
+
+Add to FUNCTIONS
+```
+void getTemp()
+{
+  sensors.requestTemperatures(); 
+  Celcius=sensors.getTempCByIndex(0);
+  Fahrenheit=sensors.toFahrenheit(Celcius);
+  Blynk.virtualWrite(V3, Fahrenheit); // Send temperature to Virtual Pin 3
+}
+```
+Add to Timing function everySecond
+```
+getTemp();
+```
 
 
 
