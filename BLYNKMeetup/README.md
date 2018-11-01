@@ -25,7 +25,7 @@ char pass[] = "PASS";
 BlynkTimer timer;
 
 // FUNCTIONS
-BLYNK_WRITE(V1) // Virtual Pin V1
+BLYNK_WRITE(V1) // Device LED on Virtual Pin V1
 {
   int pinValue = param.asInt(); // assigning incoming value from Interface pin V1 to a variable
   if(pinValue == 1){
@@ -35,7 +35,7 @@ BLYNK_WRITE(V1) // Virtual Pin V1
     digitalWrite(LED_BUILTIN, LOW);
   }
 }
- 
+
 void uptime()
 {
   Blynk.virtualWrite(V2, millis() / 1000);
@@ -63,21 +63,16 @@ void loop()
   timer.run(); 
 }
 ```
-## Temperature Probe Circuit
-![Part 2](images/MeetupPart2.PNG?raw=true "Part 2")
-
 ## Add LED and Terminal
- but on the BLYNK Interface - App
+ but on the BLYNK App
 
 Add to GLOBALS
 ```
+bool ledStatus = false;
+
 // WIDGETS
 WidgetLED led1(V3);
-bool ledStatus = false;
-```
-Add to SETUP
-```
- led1.on();
+WidgetTerminal terminal(V4);
 ```
 Add to FUNCTIONS
 ```
@@ -91,15 +86,49 @@ void blinkLedWidget()
     ledStatus = true;
   }
 }
+
+BLYNK_WRITE(V4) // Terminal Widget on V4
+{
+    if (String("debug on") == param.asStr()) {
+    debug = true;
+    terminal.println("ON") ;
+    } 
+    
+    if (String("debug off") == param.asStr()){
+    debug = false;
+    terminal.println("OFF") ;
+    
+    // Send it back
+    terminal.print("Debug is ");
+    terminal.write(param.getBuffer(), param.getLength());
+    terminal.println();
+  }
+
+  // Ensure everything is sent
+  terminal.flush();
+}
+
+
 ```
 Add to Timing function everySecond
 ```
 blinkLedWidget();
+debugPrint(); 
 ```
-Add LED widget to BLYNK app on V3
+Add to SETUP
+```
+ led1.on();
+ terminal.clear();
+ terminal.println(F("Blynk v" BLYNK_VERSION ": Device started")); // Print Blynk Software version to the Terminal Widget on connection
+ terminal.println(F("-------------"));
+ terminal.println(F("Type 'debug on' or 'debug off' for debug Terminal prints"));
+ terminal.flush();
+```
+Add LED Widget to BLYNK app on V3
+Add Terminal Widget to BLYNK app on V4 
 
-## Add Terminal
-
+## Temperature Probe Circuit
+![Part 2](images/MeetupPart2.PNG?raw=true "Part 2")
 
 ## Add Temperature Probe
 Add to GLOBALS
