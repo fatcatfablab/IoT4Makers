@@ -64,11 +64,13 @@ void loop()
 }
 ```
 ## Add LED and Terminal
- but on the BLYNK App
+On the BLYNK App
 
 Add to GLOBALS
 ```
 bool ledStatus = false;
+// Arduino.ino file - version
+char arduinoVersion[] = "BLYNKMeetupPart1.5";
 
 // WIDGETS
 WidgetLED led1(V3);
@@ -120,11 +122,14 @@ Add to SETUP
  led1.on();
  terminal.clear();
  terminal.println(F("Blynk v" BLYNK_VERSION ": Device started")); // Print Blynk Software version to the Terminal Widget on connection
+ terminal.print("Arduino.ino file ");
+ terminal.println(arduinoVersion);
  terminal.println(F("-------------"));
  terminal.println(F("Type 'debug on' or 'debug off' for debug Terminal prints"));
  terminal.flush();
 ```
 Add LED Widget to BLYNK app on V3
+
 Add Terminal Widget to BLYNK app on V4 
 
 ## Temperature Probe Circuit
@@ -139,7 +144,7 @@ Add to GLOBALS
 #define ONE_WIRE_BUS 14
 OneWire oneWire(ONE_WIRE_BUS);
 DallasTemperature sensors(&oneWire);
- float Fahrenheit=0;
+float Fahrenheit=0;
 ```
 Add to SETUP
 ```
@@ -167,8 +172,8 @@ Add to GLOBALS
 ```
 int tempTrigger = 50;
 ```
-
-
+Alert level Slider
+Alert email
 
 
 ![IoT4Makers](images/BlynkMeetup2.png?raw=true "Meetup")
