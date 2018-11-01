@@ -66,13 +66,18 @@ void loop()
 ## Temperature Probe Circuit
 ![Part 2](images/MeetupPart2.PNG?raw=true "Part 2")
 
-## Add LED
+## Add LED and Terminal
  but on the BLYNK Interface - App
 
 Add to GLOBALS
 ```
-WidgetLED led1(V1);
+// WIDGETS
+WidgetLED led1(V3);
 bool ledStatus = false;
+```
+Add to SETUP
+```
+ led1.on();
 ```
 Add to FUNCTIONS
 ```
@@ -91,7 +96,10 @@ Add to Timing function everySecond
 ```
 blinkLedWidget();
 ```
-Add LED widget to BLYNK app on V1
+Add LED widget to BLYNK app on V3
+
+## Add Terminal
+
 
 ## Add Temperature Probe
 Add to GLOBALS
