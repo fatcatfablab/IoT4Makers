@@ -64,7 +64,7 @@ void loop()
 }
 ```
 ## Add LED and Terminal
-On the BLYNK App
+Like Virtual hardware - on the BLYNK App
 
 Add to GLOBALS
 ```
