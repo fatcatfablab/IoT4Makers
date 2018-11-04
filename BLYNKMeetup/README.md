@@ -2,9 +2,9 @@
 IoT your project in 15 minutes for less that $15
 ## Prerequisites
 
-[Supported Hardware](https://github.com/blynkkk/blynkkk.github.io/blob/master/SupportedHardware.md "Supported Hardware")
-
 [Getting Started](https://www.blynk.cc/getting-started/ "Getting Started")
+
+[Supported Hardware](https://github.com/blynkkk/blynkkk.github.io/blob/master/SupportedHardware.md "Supported Hardware")
 
 [Code Builder](http://examples.blynk.cc/ "Code Builder")
 
@@ -63,6 +63,8 @@ void loop()
   timer.run(); 
 }
 ```
+Edit authentications above and upload to ESP8266 Dev Board
+
 ## Add LED and Terminal
 Like Virtual hardware - on the BLYNK App
 
@@ -128,6 +130,8 @@ Add to SETUP
  terminal.println(F("Type 'debug on' or 'debug off' for debug Terminal prints"));
  terminal.flush();
 ```
+Upload changes to ESP8266
+
 Add LED Widget to BLYNK app on V3
 
 Add Terminal Widget to BLYNK app on V4 
