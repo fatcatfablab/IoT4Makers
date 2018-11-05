@@ -222,4 +222,4 @@ Alert Email Widget
 
 [Final code for temperature probe](https://github.com/fatcatfablab/IoT4Makers/blob/master/BLYNKMeetup/BLYNKMeetupPart2.ino "Final Code Temperature Probe")
 
-![IoT4Makers](images/BlynkMeetup2.png?raw=true "Meetup")
+<!-- ![IoT4Makers](images/BlynkMeetup2.png?raw=true "Meetup") -->
