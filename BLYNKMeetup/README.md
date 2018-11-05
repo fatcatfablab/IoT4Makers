@@ -216,7 +216,7 @@ timer.setInterval(5000L, getTemp);
 ```
 Add Slider Widget in Blynk App on V6
 
-Add Temperature Alert Eventor Widger on V7
+Add Temperature Alert Eventor Widget on V7
 
 Alert Email Widget
 
