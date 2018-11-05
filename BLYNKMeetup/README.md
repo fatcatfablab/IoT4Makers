@@ -112,7 +112,13 @@ BLYNK_WRITE(V4) // Terminal Widget on V4
   terminal.flush();
 }
 
-
+void debugPrint()
+{
+  if (debug) {
+    terminal.print("ledStatus = ");
+    terminal.println(ledStatus); 
+  }
+}
 ```
 Add to Timing function everySecond()
 ```
