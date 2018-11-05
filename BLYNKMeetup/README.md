@@ -131,7 +131,7 @@ Add to SETUP
  terminal.flush();
 ```
 
-[Final Code IoT Hello World](/BLYNKMeetupPart1.ino/ "Final Code IoT Hello World")
+[Final Code IoT Hello World](https://github.com/fatcatfablab/IoT4Makers/blob/master/BLYNKMeetup/BLYNKMeetupPart1.ino "Final Code IoT Hello World")
 Link to final BLYNK IoT Hello World code
 
 Upload changes to ESP8266
