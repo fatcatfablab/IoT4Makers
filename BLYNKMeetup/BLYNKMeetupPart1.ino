@@ -6,17 +6,12 @@
 #include <ESP8266WiFi.h>
 #include <BlynkSimpleEsp8266.h>
 
-char auth[] = "5ed8fb20435a4202bd467425c72cce25"; // BLYNK App Project MeetupPart1
+char auth[] = "Blynk App Auth code"; 
 
 char arduinoVersion[] = "BLYNKMeetupPart1-V5";
-//char ssid[] = "Fat_Cat_Fablab"; 
-//char pass[] = "m4k3rb0t";
 
-//char ssid[] = "MySpectrumWiFi7c-2G";
-//char pass[] = "chillyrabbit361";
-
-char ssid[] = "D1B436";
-char pass[] = "55539777";
+char ssid[] = "WiFi SSID";
+char pass[] = "WiFi Pass";
 
 WidgetLED led1(V3);
 bool ledStatus = false;
