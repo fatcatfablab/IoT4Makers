@@ -130,6 +130,8 @@ Add to SETUP
  terminal.println(F("Type 'debug on' or 'debug off' for debug Terminal prints"));
  terminal.flush();
 ```
+Link to final BLYNK IoT Hello World code
+
 Upload changes to ESP8266
 
 Add LED Widget to BLYNK app on V3
