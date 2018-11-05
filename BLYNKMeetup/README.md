@@ -143,7 +143,7 @@ Add Terminal Widget to BLYNK app on V4
 ![Part 2](images/MeetupPart2.PNG?raw=true "Part 2")
 
 ## Add Temperature Probe and Alert 
-Changes below but use link to .ino "Final code for temperature probe" linked below
+Changes below but use [Final code for temperature probe](https://github.com/fatcatfablab/IoT4Makers/blob/master/BLYNKMeetup/BLYNKMeetupPart2.ino "Final Code Temperature Probe")
 Add to GLOBALS
 ```
 #include <OneWire.h>
