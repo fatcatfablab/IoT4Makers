@@ -132,7 +132,6 @@ Add to SETUP
 ```
 
 [Final Code IoT Hello World](https://github.com/fatcatfablab/IoT4Makers/blob/master/BLYNKMeetup/BLYNKMeetupPart1.ino "Final Code IoT Hello World")
-Link to final BLYNK IoT Hello World code
 
 Upload changes to ESP8266
 
@@ -180,8 +179,10 @@ Add to GLOBALS
 ```
 int tempTrigger = 50;
 ```
-Alert level Slider
-Alert email
+Alert Slider Widget
+Alert Notification Widget
+Alert Email Widget
 
+[Final Code Temperature Probe](https://github.com/fatcatfablab/IoT4Makers/blob/master/BLYNKMeetup/BLYNKMeetupPart2.ino "Final Code Temperature Probe")
 
 ![IoT4Makers](images/BlynkMeetup2.png?raw=true "Meetup")
