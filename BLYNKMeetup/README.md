@@ -18,9 +18,9 @@ IoT your project in 15 minutes for less that $15
 #include <ESP8266WiFi.h>
 #include <BlynkSimpleEsp8266.h>
 
-char auth[] = "your auth code"; // BLYNK App Project MeetupPart1
-char ssid[] = "SSID"; 
-char pass[] = "PASS";
+char auth[] = "your BLYNK Project auth code"; // BLYNK App Project MeetupPart1
+char ssid[] = "WiFi SSID"; 
+char pass[] = "WiFi PASS";
 
 BlynkTimer timer;
 
