@@ -142,7 +142,7 @@ Add Terminal Widget to BLYNK app on V4
 ## Temperature Probe Circuit
 ![Part 2](images/MeetupPart2.PNG?raw=true "Part 2")
 
-## Add Temperature Probe
+## Add Temperature Probe and Alert
 Add to GLOBALS
 ```
 #include <OneWire.h>
@@ -152,6 +152,9 @@ Add to GLOBALS
 OneWire oneWire(ONE_WIRE_BUS);
 DallasTemperature sensors(&oneWire);
 float Fahrenheit=0;
+
+int tempTrigger = 50;
+
 ```
 Add to SETUP
 ```
@@ -165,22 +168,51 @@ void getTemp()
   sensors.requestTemperatures(); 
   Celcius=sensors.getTempCByIndex(0);
   Fahrenheit=sensors.toFahrenheit(Celcius);
-  Blynk.virtualWrite(V3, Fahrenheit); // Send temperature to Virtual Pin 3
+  //Serial.print(" C  ");
+  //Serial.print(Celcius);
+  Serial.print(" F  ");
+  Serial.println(Fahrenheit); 
+  Blynk.virtualWrite(V5, Fahrenheit); // Send temp to Virtual Pin 5
 }
+
+BLYNK_WRITE(V6)
+{
+  lowTempThreshold = param.asInt(); // assigning incoming value from pin V6 to a variable
+}
+
+void setLedWidget()
+{
+  if(lowTempThreshold > Fahrenheit)
+  {
+    tempAlert = true;
+    led1.setColor("#D3435C"); //Red
+    Blynk.virtualWrite(V7, 1); //Trigger for Eventor Notifications
+    //Serial.println("Red");
+  }
+  if(lowTempThreshold < Fahrenheit)
+  {
+    tempAlert = false;
+    led1.setColor("#23C48E"); //Green
+    Blynk.virtualWrite(V7, 0);
+    //Serial.println("Green");
+  }
+
+}
+
 ```
 Add to Timing function everySecond
 ```
-getTemp();
+  //blinkLedWidget(); 
+  setLedWidget();
 ```
-Add Labled Value Display to BLYNK App on V3 - PUSH
+Add to SETUP
+```
+timer.setInterval(5000L, getTemp);
+```
+Add Slider Widget in Blynk App on V6
 
-## Setup Temperature Alert
-Add to GLOBALS
-```
-int tempTrigger = 50;
-```
-Alert Slider Widget
-Alert Notification Widget
+Add Temperature Alert Eventor Widger on V7
+
 Alert Email Widget
 
 [Final Code Temperature Probe](https://github.com/fatcatfablab/IoT4Makers/blob/master/BLYNKMeetup/BLYNKMeetupPart2.ino "Final Code Temperature Probe")
