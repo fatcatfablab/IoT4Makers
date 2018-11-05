@@ -6,7 +6,7 @@ IoT your project in 15 minutes for less that $15
 
 [Supported Hardware](https://github.com/blynkkk/blynkkk.github.io/blob/master/SupportedHardware.md "Supported Hardware")
 
-[Code Builder](http://examples.blynk.cc/ "Code Builder")
+[Sketch Generator](http://examples.blynk.cc/ "Sketch Generator")
 
 ## IoT Hello World
 ```
