@@ -114,7 +114,7 @@ BLYNK_WRITE(V4) // Terminal Widget on V4
 
 
 ```
-Add to Timing function everySecond
+Add to Timing function everySecond()
 ```
 blinkLedWidget();
 debugPrint(); 
