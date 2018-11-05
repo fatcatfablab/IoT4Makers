@@ -10,7 +10,7 @@ IoT your project in 15 minutes for less that $15
 
 ## IoT Hello World
 ```
-// On ESP8266 Dev board=(Device) Phone=(Interface) 
+// On ESP8266 Dev board=(Device) Phone with Blynk App=(Interface) 
 // Device --> Server --> Interface  | = Arduino uptime on Interface
 // Device <-- Server <-- Interface  | = LED control on Device
 
@@ -63,7 +63,7 @@ void loop()
   timer.run(); 
 }
 ```
-Edit authentications above and upload to ESP8266 Dev Board
+Edit authentications above and upload to ESP8266 Dev Board and open Blynk app
 
 ## Add LED and Terminal
 Like Virtual hardware - on the BLYNK App
@@ -142,7 +142,8 @@ Add Terminal Widget to BLYNK app on V4
 ## Temperature Probe Circuit
 ![Part 2](images/MeetupPart2.PNG?raw=true "Part 2")
 
-## Add Temperature Probe and Alert
+## Add Temperature Probe and Alert 
+Changes below but use link to .ino "Final code for temperature probe" linked below
 Add to GLOBALS
 ```
 #include <OneWire.h>
@@ -151,14 +152,17 @@ Add to GLOBALS
 #define ONE_WIRE_BUS 14
 OneWire oneWire(ONE_WIRE_BUS);
 DallasTemperature sensors(&oneWire);
-float Fahrenheit=0;
-
-int tempTrigger = 50;
-
+ float Celcius=0;
+ float Fahrenheit=0;
+ int lowTempThreshold = 50; // Default thresholds
+ int highTempThreshold = 90;
+ bool tempAlert = false;
+ const int tempPin = 14; // D5
 ```
 Add to SETUP
 ```
 sensors.begin(); // Temperature probe lib initialize
+timer.setInterval(5000L, getTemp);
 ```
 
 Add to FUNCTIONS
@@ -215,6 +219,6 @@ Add Temperature Alert Eventor Widger on V7
 
 Alert Email Widget
 
-[Final Code Temperature Probe](https://github.com/fatcatfablab/IoT4Makers/blob/master/BLYNKMeetup/BLYNKMeetupPart2.ino "Final Code Temperature Probe")
+[Final code for temperature probe](https://github.com/fatcatfablab/IoT4Makers/blob/master/BLYNKMeetup/BLYNKMeetupPart2.ino "Final Code Temperature Probe")
 
 ![IoT4Makers](images/BlynkMeetup2.png?raw=true "Meetup")
