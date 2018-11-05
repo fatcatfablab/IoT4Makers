@@ -1,6 +1,8 @@
 /*
 
-    Downloads, docs, tutorials: http://www.blynk.cc
+  Temp Probe on Blynk App and ESP8266 Dev board  
+   
+   Downloads, docs, tutorials: http://www.blynk.cc
     Sketch generator:           http://examples.blynk.cc
     Blynk community:            http://community.blynk.cc
     Follow us:                  http://www.fb.com/blynkapp
@@ -12,7 +14,7 @@
  *                         
  *                         ESP 8266 12E   Pin       
  *                       --A0     D0--GPIO16-- |X Needed for deep sleep
- *                       --GND    D1--GPIO5--  | -- 470ohm Resistor -- Neopixel
+ *                       --GND    D1--GPIO5--  | -- Future Version - 470ohm Resistor -- Neopixel
  *                       --VV     D2--GPIO4----|
  *                       --SD3    D3--GPIO0----| -- Led
  *                       --SD2    D4--GPIO2----|XX BuiltIn LED pin 2 and Bootloader 
@@ -21,7 +23,7 @@
  *                       --SD0    D5--GPIO14---| -- DS18B20 Temp Probe + 4.7k pulldown resistor
  *                       --CLK    D6--GPIO12---| -- 
  *                       --GND    D7--GPIO13---| -- 
- *                       --3V3    D8--GPIO15---|xx ? Wants 10k pulldown ? Conflicts with serial output
+ *                       --3V3    D8--GPIO15---|xx ? Conflicts with serial output
  *                       --EN     RX--
  *                       --RST    TX--
  *                 Ground--GND    GND----------|
