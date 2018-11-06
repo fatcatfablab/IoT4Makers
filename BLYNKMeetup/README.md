@@ -4,7 +4,7 @@ IoT your project in 15 minutes for less that $15
 
 [Arduino IDE](https://www.arduino.cc/en/Main/Software/ "Arduino IDE")
 
-[Getting Started](https://www.blynk.cc/getting-started/ "Getting Started")
+[Getting Started](https://www.blynk.cc/getting-started/ "BLYNK Getting Started")
 
 [Supported Hardware](https://github.com/blynkkk/blynkkk.github.io/blob/master/SupportedHardware.md "Supported Hardware")
 
