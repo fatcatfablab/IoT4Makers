@@ -2,8 +2,7 @@
 IoT your project in 15 minutes for less that $15
 ## Prerequisites
 
-https://www.arduino.cc/en/Main/Software
-[Arduino IDE](https://www.arduino.cc/en/Main/Software/ "Getting Started")
+[Arduino IDE](https://www.arduino.cc/en/Main/Software/ "Arduino IDE")
 
 [Getting Started](https://www.blynk.cc/getting-started/ "Getting Started")
 
