@@ -66,8 +66,11 @@ void loop()
 }
 ```
 Edit authentications above and upload to ESP8266 Dev Board 
+
 Add Widget to Project in BLYNK App
+
 Add Button Widget on V1
+
 Add Value Display on V2
 
 ## Add LED and Terminal
