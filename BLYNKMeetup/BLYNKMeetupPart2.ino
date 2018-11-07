@@ -31,16 +31,22 @@
  *  
 */
 
-/* Blynk App > Device
- * BLYNK_WRITE(V1) //Called every time Widget on V1 in Blynk app writes values to V1
+/* 
+ * Blynk App > Device - Blynk Example - Get Data 
+ * BLYNK_WRITE(V1){ //Called every time Widget on V1 in Blynk app writes values to V1
  *  int pinValue = param.asInt(); // assigning incoming value from Interface pin V1 to a variable
+ *  }
  *  
- * Device > Blynk App
+ * Device > Blynk App - Blynk Example - Push Data
  *  Blynk.virtualWrite(V7, value); //Trigger for Eventor Notifications
  *  
- * Device > Blynk App 
- *  WidgetLED led1(V3); //Create Widget object
- *    led1.setColor("#D3435C"); //Set Widget object parameters
+ * Blynk App Request < From Device - Blynk Example - Push Data On Request
+ * BLYNK_READ(V8){
+ *  Blynk.virtualWrite(PIN_UPTIME, millis() / 1000);
+ *{
+ *
+ */
+
 /* Comment this out to disable prints and save space */
 
 #define BLYNK_PRINT Serial
