@@ -20,7 +20,7 @@
  *                       --SD2    D4--GPIO2----|XX BuiltIn LED pin 2 and Bootloader 
  *                       --SD1    3V3--3.3V----|V+ 
  *                       --CMD    GND--GPIO----|
- *                       --SD0    D5--GPIO14---| -- DS18B20 Temp Probe + 4.7k pulldown resistor
+ *                       --SD0    D5--GPIO14---| -- DS18B20 Temp Probe + 4.7k pullup resistor
  *                       --CLK    D6--GPIO12---| -- 
  *                       --GND    D7--GPIO13---| -- 
  *                       --3V3    D8--GPIO15---|xx ? Conflicts with serial output
