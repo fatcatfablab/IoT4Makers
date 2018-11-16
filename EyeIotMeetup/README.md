@@ -5,7 +5,7 @@ How to bolt on a network accessible camera to your low power low bandwidth IoT p
 
 *A Use Case*
 
-So you've created a protype of your low power low bandwidth IoT project but
+So you've created a prototype of your low power low bandwidth IoT project but
 find that it glitches once in a while. We'll cover how to bolt on a power
 and bandwidth Raspberry Pi with camera to resolve the problem, and perhaps
 enhanced the rig for future projects.
@@ -27,3 +27,4 @@ enhanced the rig for future projects.
 1. Shell Scripts
 2. Python Code
 3. Docker container spec
+4. Docs
