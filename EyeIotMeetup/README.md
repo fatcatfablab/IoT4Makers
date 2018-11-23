@@ -14,8 +14,8 @@ resolve the problem. Perhaps enhanced and use the rig for future projects.
 *Outline*
 
 1. Present primary IoT use case - temporary addition for monitoring
-2. Basic network camera setup
-3. Motion (open source software) vs Python program option
+2. Basic network camera setup (Motion open source software)
+3. Alternative custom framework using Python
 4. Securing upload using OpenSSL and Docker containers
 5. Synchronizing images and IoT sensor data (from MQTT topics)
 6. Remotely trigger On/Off camera via MQTT
