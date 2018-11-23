@@ -1,4 +1,4 @@
-**Keeping an Eye on you IoT**
+**Keeping an Eye on your IoT**
 
 How to bolt on a network accessible camera to your low power low bandwidth IoT project.
 
@@ -7,19 +7,20 @@ How to bolt on a network accessible camera to your low power low bandwidth IoT p
 
 So you've created a prototype of your low power low bandwidth IoT project but
 find that it glitches once in a while. We'll cover how to temporarily bolt on a power
-and bandwidth hungry Raspberry Pi with camera to resolve the problem, and perhaps
-enhanced the rig for future projects.
+and bandwidth hungry Raspberry Pi with camera to help monitor and hopefully
+resolve the problem. Perhaps enhanced and use the rig for future projects.
 
 
 *Outline*
 
-1. Present use cases - temporary rig addition
+1. Present primary IoT use case - temporary addition for monitoring
 2. Basic network camera setup
 3. Motion (open source software) vs Python program option
 4. Securing upload using OpenSSL and Docker containers
 5. Synchronizing images and IoT sensor data (from MQTT topics)
-6. Future use case - vision processing
-7. Q&A
+6. Remotely trigger On/Off camera via MQTT
+7. Future use case - vision processing, ML?
+8. Q&A
 
 
 *Artifacts*
