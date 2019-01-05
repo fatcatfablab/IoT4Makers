@@ -18,9 +18,7 @@ resolve the problem. Perhaps enhance and use the rig for future projects.
 3. Alternative custom framework using Python
 4. Securing upload using OpenSSL and Docker containers
 5. Synchronizing images and IoT sensor data (from MQTT topics)
-6. Remotely trigger On/Off camera via MQTT
-7. Future use case - vision processing, ML?
-8. Q&A
+6. Q&A
 
 
 *Artifacts*
@@ -30,3 +28,4 @@ resolve the problem. Perhaps enhance and use the rig for future projects.
 3. Docker container spec
 4. Docs
 5. Slides
+6. Related URLs
